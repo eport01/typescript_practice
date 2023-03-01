@@ -1,21 +1,11 @@
 import {ChangeEvent, FC, useState} from 'react';
-
-export enum HairColor {
-  Blonde = "Your hair is blonde!",
-  Brown = "Cool hair color", 
-  Pink = "Wow that is cool!",
-}
-
-interface Props {
-  name: string;
-  age: number;
-  email: string;
-  hairColor: HairColor;
-  //getName: (name: string) => string; 
-}
+import { HairColor } from '../Enums';
+import { User } from '../Interfaces'; 
 
 
-export const Person: FC<Props> = ({name, age, email, hairColor}) => {
+
+
+export const Person: FC<User> = ({name, age, email, hairColor}) => {
 
   const [country, setCountry] = useState<string | null >("")
 
